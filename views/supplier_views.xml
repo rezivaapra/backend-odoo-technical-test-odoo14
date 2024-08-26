@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="material_supplier_tree" model="ir.ui.view">
+        <field name="name">material.supplier.tree</field>
+        <field name="model">material.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="material_supplier_form" model="ir.ui.view">
+        <field name="name">material.supplier.form</field>
+        <field name="model">material.supplier</field>
+        <field name="arch" type="xml">
+            <form string="Daftar Supplier">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="material_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">material.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="material_supplier_menu_act" 
+        name="Daftar Supplier" 
+        parent="material_supplier_menu_categ" 
+        action="material_supplier_action" 
+        sequence="12"
+    />
+</odoo>

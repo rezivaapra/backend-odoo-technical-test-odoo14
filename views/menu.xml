@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem 
+        id="material_menu_root"
+        name="Material"
+        sequence="10"
+    />
+
+    <menuitem 
+        id="material_material_menu_categ"
+        name="Material"
+        parent="material_menu_root"
+        sequence="10"
+    />
+
+    <menuitem 
+        id="material_supplier_menu_categ"
+        name="Supplier"
+        parent="material_menu_root"
+        sequence="12"
+    />
+</odoo>
